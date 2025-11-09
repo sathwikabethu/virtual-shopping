@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>👕 Try On - {{ category }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin: 20px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 700px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .btn-back {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>👕 Try On - {{ category }}</h1>
+
+    <div class="video-container">
+        <video id="video" autoplay></video>
+        <img src="{{ item }}" alt="overlay item" class="overlay" id="overlay">
+    </div>
+
+    <br>
+    <button class="btn-back" onclick="window.location.href='/'">⬅ Back to Shop</button>
+
+    <script>
+        // Access webcam
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => { video.srcObject = stream; })
+            .catch(err => alert('Camera access denied or not found: ' + err));
+
+        // Optional: Move overlay slightly with mouse
+        const overlay = document.getElementById('overlay');
+        document.addEventListener('mousemove', e => {
+            const rect = video.getBoundingClientRect();
+            overlay.style.top = (e.clientY - 80) + 'px';
+            overlay.style.left = (e.clientX - 100) + 'px';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🛍️ Virtual Shopping</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* --- Reset + Base Styles --- */
+  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🛍️ Virtual Shopping</h1>
+        <div>
+            <input type="text" placeholder="Search products..." id="searchBox">
+            <button onclick="search()">Search</button>
+            <a href="{{ url_for('view_cart') }}" class="cart-link">🛒 View Cart</a>
+
+
+        </div>
+    </header>
+
+    <div class="container">
+        {% for category, items in products.items() %}
+        <section>
+            <h2>{{ category }}</h2>
+            <div class="product-grid">
+                {% for product in items %}
+                <div class="product-card">
+                    <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">{{ product.price }}</p>
+                    <div class="buttons">
+                        <button class="btn-cart">🛒 Add to Cart</button>
+                        <button class="btn-try" onclick="window.open('/try_on/{{ category.lower() }}/{{ product.image.split('/')[-1].split('.')[0] }}', '_blank')">👕 Try On</button>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+
+    <footer>
+        © 2025 Virtual Shopping | Built with ❤️ using Flask
+    </footer>
+
+    <script>
+        function search() {
+            const q = document.getElementById("searchBox").value;
+            window.location.href = "/?q=" + q;
+        }
+    </script>
+</body>
+</html>

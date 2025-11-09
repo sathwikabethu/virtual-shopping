@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<header>
+    <h1>💳 Checkout</h1>
+    <nav>
+        <a href="{{ url_for('cart') }}">⬅ Back to Cart</a>
+    </nav>
+</header>
+
+<main>
+    <form action="{{ url_for('checkout') }}" method="POST" class="checkout-form">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <label>Payment Method:</label>
+        <select name="payment" required>
+            <option value="COD">Cash on Delivery</option>
+            <option value="Card">Credit/Debit Card</option>
+            <option value="UPI">UPI</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
+</main>
+</body>
+</html>
