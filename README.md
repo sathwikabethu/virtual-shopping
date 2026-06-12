@@ -6,7 +6,7 @@
 
 ## 📋 Project Overview
 
-Virtual Shopping is a full-stack e-commerce web application designed to enhance the online shopping experience by combining traditional product browsing with augmented reality (AR) virtual try-on capabilities. This project demonstrates the integration of modern web technologies with computer vision to create an immersive shopping experience.
+Virtual Shopping is a full-stack e-commerce web application designed to enhance the online shopping experience by combining traditional product browsing with augmented reality (AR) virtual try-on capabilities.
 
 ### Problem Solved
 - **Traditional e-commerce limitation**: Users cannot visualize how products will look on them before purchase, leading to high return rates and customer dissatisfaction.
@@ -309,46 +309,6 @@ http://localhost:10000
 
 ---
 
-## 📸 Screenshots & Demo
-
-### Homepage
-```
-[SCREENSHOT PLACEHOLDER: Product browsing interface]
-- Product grid layout
-- Search bar at top
-- Category navigation
-- Product cards with images and prices
-```
-
-### AR Virtual Try-On
-```
-[SCREENSHOT PLACEHOLDER: AR interface]
-- Live webcam feed
-- Product overlay on user
-- Real-time pose detection
-- Interaction controls
-```
-
-### Shopping Cart
-```
-[SCREENSHOT PLACEHOLDER: Cart interface]
-- Cart items list
-- Price calculations
-- Quantity adjusters
-- Checkout button
-```
-
-### Demo Video
-```
-[DEMO LINK PLACEHOLDER: YouTube/Vimeo video]
-Full walkthrough of the application:
-- Product browsing (1:00-2:30)
-- AR virtual try-on demonstration (2:30-4:15)
-- Shopping cart and checkout (4:15-6:00)
-```
-
----
-
 ## 🎯 Challenges Faced
 
 ### 1. **AR Pose Detection Accuracy**
@@ -619,14 +579,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Sathwika Bethu**
 
-Senior Full-Stack Developer | Computer Vision Enthusiast | Open-Source Contributor
+Full-Stack Developer | Computer Vision Enthusiast | Open-Source Contributor
 
 ### Connect With Me
 
-- **GitHub**: [sathwikabethu](https://github.com/sathwikabethu)
-- **LinkedIn**: [linkedin.com/in/sathwikabethu](https://linkedin.com/in/sathwikabethu)
-- **Email**: sathwika.bethu@example.com
-- **Portfolio**: [sathwikabethu.dev](https://sathwikabethu.dev)
+- **GitHub**: [@sathwikabethu](https://github.com/sathwikabethu)
+- **LinkedIn**: [Sathwika Bethu](https://www.linkedin.com/in/sathwika-bethu/)
+- **Email**: bethusathwika@gmail.com
+- **Portfolio**: [View Portfolio](https://portfolio-two-eosin-7szhn91w2y.vercel.app/)
 
 ### Let's Connect!
 If you found this project interesting or useful, please consider:
@@ -641,7 +601,7 @@ If you found this project interesting or useful, please consider:
 
 Have questions or suggestions? Feel free to:
 - Open an issue on GitHub
-- Email: sathwika.bethu@example.com
+- Email: bethusathwika@gmail.com
 - Check out the [Discussions](https://github.com/sathwikabethu/virtual-shopping/discussions) tab
 
 ---
